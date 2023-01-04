@@ -43,10 +43,28 @@ if(isset($_POST['btn-cadastrar'])){
         <?php
         
     } else {
-        $sql = "INSERT INTO registro_vendas(RegistroID, Cliente, Produto, Quantidade, TotalVenda, FormaPagamento, DataVenda)
-            VALUES('','$cliente', '$produto', $quantidade, $totalVenda, '$formaPagamento', '$dataVenda');
-        ";
+        
+        $sql_nomeCliente = "SELECT * FROM Clientes WHERE Nome = '$cliente'";
 
+        $resultadoNomeCliente = mysqli_query($connect,$sql_nomeCliente);
+
+        if(mysqli_num_rows($resultadoNomeCliente) > 0){
+
+            $campo = mysqli_fetch_array($resultadoNomeCliente);
+
+            $ClienteID = $campo['ClienteID'];
+
+        } else {
+
+            $ClienteID = 'Sem cadastro';
+        }
+
+        // $sql_registroID = "SELECT * FROM registro_vendas WHERE Cliente = '$ClienteID'
+        // ";
+        
+        $sql = "INSERT INTO registro_vendas(RegistroID, Cliente, Produto, Quantidade, TotalVenda, FormaPagamento, DataVenda)
+            VALUES('','$ClienteID', '$produto', $quantidade, $totalVenda, '$formaPagamento', '$dataVenda');
+        ";
 
         if(mysqli_query($connect, $sql)){
             $_SESSION['mensagem'] = 'Cadastrado com sucesso!';
