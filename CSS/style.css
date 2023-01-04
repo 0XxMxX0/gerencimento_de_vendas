@@ -1,0 +1,23 @@
+.row .col.s4 {
+    width: 33.3333333333%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    margin-right: 5px;
+}
+
+.row .col.s3 {
+    width: 25%;
+    margin-left: auto;
+    left: auto;
+    margin-right: 5px;
+    right: auto;
+}
+
+input[type=date]::-webkit-datetime-edit{ color: transparent; }
+input[type=date]:valid::-webkit-datetime-edit{ color: #000; }
+input[type=date]:focus::-webkit-datetime-edit{ color: #000; }
+
+input[type=date]{ color: transparent; }
+input[type=date]:valid{ color: #000; }
+input[type=date]:focus{ color: #000; }
