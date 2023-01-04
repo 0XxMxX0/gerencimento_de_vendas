@@ -31,7 +31,7 @@ if(isset($_POST['btn-cadastrar'])){
                         <label for="quantidade-parcelas">Quantidades de parcelas</label>
                         <input type='number' name="quantidade-parcelas" id="quantidade-parcelas"/>
                     </div>
-                        <a class="btn green"onclick='gerarParcelamento()'>Confirmar Parcelamento</a>
+                        <a class="btn green" onclick='gerarParcelamento()'>Confirmar Parcelamento</a>
                     <div class="row">
                         <div class="input-field col s12" id='campoParcelamento'></div>
                     </div>
