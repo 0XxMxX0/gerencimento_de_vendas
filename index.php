@@ -19,7 +19,7 @@ include_once "./include/head.php";
 
 <div class="row">
     <div class="col s12 m10 push-m1">
-        <h3 class="light">HISTORICO DE VENDAS</h3>
+        <h3 class="light">HISTORICO DE VENDAS:</h3>
         <table class="striped">
             <thead>
                 <tr>
